@@ -15,4 +15,4 @@
 
 This is a simple little tool to extract XUB messages from CargoWises eAdapter.
 It is packaged on the [NuGet Package Manager](https://www.nuget.org/packages/CargoWiseXubExtractor/) as a dotnet tool, so you can install it by writing `dotnet tool install CargoWiseXUBExtractor` into a terminal.
-
+You can then use the tool by writing `cwxubextractor` in a terminal.
