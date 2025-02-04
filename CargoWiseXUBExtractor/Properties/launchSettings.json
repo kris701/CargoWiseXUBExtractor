@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CargoWiseBatchExtractor": {
+      "commandName": "Project",
+      "commandLineArgs": "-n YOY -s HST -e https://YOYHSTservices.wisegrid.net/eAdaptor -u yoyo -p yoyo13579"
+    }
+  }
+}
