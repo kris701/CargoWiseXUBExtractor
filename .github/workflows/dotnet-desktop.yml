@@ -40,7 +40,7 @@ jobs:
 
       - name: Build (Release) and Publish
         run: |  
-          cd CargoWiseXubExtractor
+          cd CargoWiseXUBExtractor
           dotnet nuget add source --username kris701 --password ${{ secrets.API_KEY_GITHUB }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/kris701/index.json"
           dotnet build --configuration Release
           dotnet pack --configuration Release
@@ -55,7 +55,7 @@ jobs:
         id: get-version
         uses: kzrnm/get-net-sdk-project-versions-action@v1
         with:
-          proj-path: CargoWiseXubExtractor/CargoWiseXubExtractor.csproj
+          proj-path: CargoWiseXUBExtractor/CargoWiseXUBExtractor.csproj
 
       - name: Generate tag
         continue-on-error: true
@@ -69,5 +69,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
-          artifacts: "CargoWiseXubExtractor/bin/Release/*.nupkg"
+          artifacts: "CargoWiseXUBExtractor/bin/Release/*.nupkg"
           tag: "v${{ steps.get-version.outputs.package-version }}"
