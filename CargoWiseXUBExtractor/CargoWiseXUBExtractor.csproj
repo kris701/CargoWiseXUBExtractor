@@ -5,11 +5,45 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <IsPackable>true</IsPackable>
+	  <PackAsTool>true</PackAsTool>
+	  <ToolCommandName>cwxubextractor</ToolCommandName>
+	  <Title>CargoWiseXUBExtractor</Title>
+	  <Authors>Kristian Skov Johansen</Authors>
+	  <Description>A tool to extract XUB messages from CargoWise</Description>
+	  <RepositoryUrl>https://github.com/kris701/CargoWiseXUBExtractor</RepositoryUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="CommandLineParser" Version="2.9.1" />
 		<PackageReference Include="SerializableHttps" Version="1.0.10" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<PropertyGroup>
+		<PackageIcon>logo.png</PackageIcon>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="logo.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 </Project>
