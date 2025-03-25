@@ -1,12 +1,8 @@
 ﻿using SerializableHttps;
 using SerializableHttps.AuthenticationMethods;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace CargoWiseXUBExtractor
@@ -23,7 +19,7 @@ namespace CargoWiseXUBExtractor
 				if (done == 0)
 					Console.WriteLine($"\t\tGetting batch 1 out of {toID - fromID + 1}");
 				else
-					Console.WriteLine($"\t\tGetting batch {done} out of {toID - fromID + 1} (Est: {(stopWatch.Elapsed / done) * (toID - fromID)})");
+					Console.WriteLine($"\t\tGetting batch {done} out of {toID - fromID + 1} (Est: {(stopWatch.Elapsed / done) * (toID - fromID + 1 - done)})");
 				await FetchBatch(i, countryCode, opts);
 				done++;
 			}
