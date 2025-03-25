@@ -25,7 +25,7 @@ namespace CargoWiseXUBExtractor
 		[Option('p', "password", Required = true, HelpText = "The password to use for the inbound connection.")]
 		public string Password { get; set; } = "";
 
-		[Option('t', "targetExpression", Required = true, HelpText = "Target expression. The format is '{companyName}:{targetBatch};' for a single batch. '{companyName}:{fromBatch}-{toBatch};' for a range of batches. You can combine multiple expression, seperated by a ;")]
+		[Option('t', "targetExpression", Required = true, HelpText = "Target expression. The format is '{companyName}:{targetBatch};' for a single batch. '{companyName}:{fromBatch}-{toBatch};' for a range of batches. You can combine multiple expression, seperated by a ;. Target badge and ranges are INCLUSIVE!")]
 		public string TargetExpression { get; set; } = "";
 
 	}

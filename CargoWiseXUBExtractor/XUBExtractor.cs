@@ -18,7 +18,7 @@ namespace CargoWiseXUBExtractor
 			var stopWatch = new Stopwatch();
 			stopWatch.Start();
 			var done = 0;
-			for (int i = fromID; i < toID; i++)
+			for (int i = fromID; i <= toID; i++)
 			{
 				if (done > 0)
 					Console.WriteLine($"\t\tGetting batch {done + 1} out of {toID - fromID} (Est: {(stopWatch.Elapsed / done) * (toID - fromID)})");
