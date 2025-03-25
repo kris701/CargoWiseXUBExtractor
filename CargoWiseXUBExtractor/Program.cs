@@ -25,7 +25,7 @@ namespace CargoWiseXUBExtractor
 
 			Console.WriteLine("Begining XUB extraction...");
 			var targetCompanies = opts.TargetExpression.Split(';', StringSplitOptions.RemoveEmptyEntries);
-			Console.WriteLine($"\tA total of {targetCompanies.Length} companies to extract from.");
+			Console.WriteLine($"\tA total of {targetCompanies.Distinct().Count()} distinct companies to extract from.");
 			foreach (var targetCompany in targetCompanies)
 			{
 				var split = targetCompany.Split(':', StringSplitOptions.RemoveEmptyEntries);

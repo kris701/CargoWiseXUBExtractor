@@ -20,8 +20,10 @@ namespace CargoWiseXUBExtractor
 			var done = 0;
 			for (int i = fromID; i <= toID; i++)
 			{
-				if (done > 0)
-					Console.WriteLine($"\t\tGetting batch {done + 1} out of {toID - fromID} (Est: {(stopWatch.Elapsed / done) * (toID - fromID)})");
+				if (done == 0)
+					Console.WriteLine($"\t\tGetting batch 1 out of {toID - fromID + 1}");
+				else
+					Console.WriteLine($"\t\tGetting batch {done} out of {toID - fromID + 1} (Est: {(stopWatch.Elapsed / done) * (toID - fromID)})");
 				await FetchBatch(i, countryCode, opts);
 				done++;
 			}
